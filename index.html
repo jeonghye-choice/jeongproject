@@ -17,8 +17,8 @@
   <nav id="navbar">
     <div class="nav-logo">JJ<span>.</span></div>
     <ul class="nav-links">
-      <li><a href="#about" class="nav-pill active">Journey</a></li>
-      <li><a href="#gallery" class="nav-pill">Works</a></li>
+      <li><a href="#gallery" class="nav-pill active">Works</a></li>
+      <li><a href="#about" class="nav-pill">Journey</a></li>
       <li><a href="#media" class="nav-pill">Media</a></li>
     </ul>
     <div class="nav-socials">
@@ -70,6 +70,114 @@
   </section>
 
   <!-- GALLERY SCROLL -->
+  <section id="gallery">
+    <div class="gallery-header">
+      <div>
+        <p class="section-label">Featured Works</p>
+        <h2 class="gallery-title">Selected <span class="accent-word">Works</span></h2>
+      </div>
+      <div class="gallery-nav-btns">
+        <button class="gallery-arrow" id="galleryPrev" aria-label="Previous">←</button>
+        <button class="gallery-arrow" id="galleryNext" aria-label="Next">→</button>
+      </div>
+    </div>
+    <div class="gallery-track" id="galleryTrack">
+
+      <div class="gallery-card" id="gcard-1">
+        <img src="img/clony_thumbnail_v2.png" alt="CLONY K-Beauty Guide" class="gallery-img" />
+        <div class="gallery-overlay"></div>
+        <div class="gallery-info">
+          <span class="gallery-tag">App / Design</span>
+          <h3 class="gallery-card-title">CLONY: Global K-Beauty Guide</h3>
+          <p class="gallery-card-desc">글로벌 관광객의 언어 장벽을 해결하기 위해 비즈니스 가설을 세우고, 이를 실질적인 서비스로 구현한 프로젝트입니다.</p>
+          <a href="https://www.miricanvas.com/v2/ko/design2/851e2b8d-b730-479d-8128-7d4df59ec0a6?location=design&type=copy_link&access=link&permission=viewer" target="_blank" rel="noopener" class="gallery-link">VIEW MORE →</a>
+        </div>
+      </div>
+
+      <div class="gallery-card" id="gcard-2">
+        <img src="img/cafe_thumb.png" alt="Cafe Curation" class="gallery-img" />
+        <div class="gallery-overlay"></div>
+        <div class="gallery-info">
+          <span class="gallery-tag">Instagram / Curation</span>
+          <h3 class="gallery-card-title">Cafe Curation: 감도 높은 공간들</h3>
+          <p class="gallery-card-desc">직접 경험한 감각적인 카페들을 큐레이션하여 소개합니다. 공간의 무드와 맛을 나만의 시선으로 기록하고 제안합니다.</p>
+          <a href="https://www.instagram.com/jh_cafe.comma/" target="_blank" rel="noopener" class="gallery-link">VIEW MORE →</a>
+        </div>
+      </div>
+
+      <div class="gallery-card" id="gcard-3">
+        <img src="img/living_thumb.png" alt="Living Curation" class="gallery-img" />
+        <div class="gallery-overlay"></div>
+        <div class="gallery-info">
+          <span class="gallery-tag">Instagram / Lifestyle</span>
+          <h3 class="gallery-card-title">Living Insight: 슬기로운 자취생활</h3>
+          <p class="gallery-card-desc">자취생들을 위한 실용적인 정보와 감각적인 리빙 아이템을 큐레이션합니다. 일상의 질을 높이는 인사이트를 공유합니다.</p>
+          <a href="https://www.instagram.com/answerishye/" target="_blank" rel="noopener" class="gallery-link">VIEW MORE →</a>
+        </div>
+      </div>
+
+      <div class="gallery-card" id="gcard-4">
+        <img src="https://picsum.photos/seed/work4/900/1200" alt="Work 4" class="gallery-img" />
+        <div class="gallery-overlay"></div>
+        <div class="gallery-info">
+          <span class="gallery-tag">Project</span>
+          <h3 class="gallery-card-title">Project Title</h3>
+          <p class="gallery-card-desc">작업물 설명을 추가할 예정입니다.</p>
+          <a href="#" class="gallery-link">VIEW MORE →</a>
+        </div>
+      </div>
+
+      <div class="gallery-card" id="gcard-5">
+        <img src="https://picsum.photos/seed/work5/900/1200" alt="Work 5" class="gallery-img" />
+        <div class="gallery-overlay"></div>
+        <div class="gallery-info">
+          <span class="gallery-tag">Design</span>
+          <h3 class="gallery-card-title">Project Title</h3>
+          <p class="gallery-card-desc">작업물 설명을 추가할 예정입니다.</p>
+          <a href="#" class="gallery-link">VIEW MORE →</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="gallery-progress-wrap">
+      <div class="gallery-progress-bar" id="galleryProgress"></div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section section-alt">
+    <div class="container">
+
+      <h2 class="section-title">Portfolio</h2>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="doc">Document</button>
+        <button class="filter-btn" data-filter="project">Project</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-placeholder">
+          <div class="pp-icon">🖼️</div>
+          <p>작업물을 추가할 예정입니다</p>
+          <span>Design · Documents · Projects</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section section-alt">
+    <div class="container">
+
+      <h2 class="section-title">Ongoing Projects</h2>
+      <div class="projects-grid">
+        <div class="project-placeholder">
+          <div class="live-badge">🔥 Coming Soon</div>
+          <p>진행 중인 프로젝트들을 여기에 담을 예정입니다</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
   <!-- ABOUT -->
@@ -229,101 +337,6 @@
   </section>
 
   <!-- WORKS SECTION -->
-  <section id="gallery">
-    <div class="gallery-header">
-      <div>
-        <p class="section-label">Featured Works</p>
-        <h2 class="gallery-title">Selected <span class="accent-word">Works</span></h2>
-      </div>
-      <div class="gallery-nav-btns">
-        <button class="gallery-arrow" id="galleryPrev" aria-label="Previous">←</button>
-        <button class="gallery-arrow" id="galleryNext" aria-label="Next">→</button>
-      </div>
-    </div>
-    <div class="gallery-track" id="galleryTrack">
-
-      <div class="gallery-card" id="gcard-1">
-        <img src="img/clony_thumbnail_v2.png" alt="CLONY K-Beauty Guide" class="gallery-img" />
-        <div class="gallery-overlay"></div>
-        <div class="gallery-info">
-          <span class="gallery-tag">App / Design</span>
-          <h3 class="gallery-card-title">CLONY: Global K-Beauty Guide</h3>
-          <p class="gallery-card-desc">글로벌 관광객의 언어 장벽을 해결하기 위해 비즈니스 가설을 세우고, 이를 실질적인 서비스로 구현한 프로젝트입니다.</p>
-          <a href="https://www.miricanvas.com/v2/ko/design2/851e2b8d-b730-479d-8128-7d4df59ec0a6?location=design&type=copy_link&access=link&permission=viewer" target="_blank" rel="noopener" class="gallery-link">VIEW MORE →</a>
-        </div>
-      </div>
-
-      <div class="gallery-card" id="gcard-2">
-        <img src="img/cafe_thumb.png" alt="Cafe Curation" class="gallery-img" />
-        <div class="gallery-overlay"></div>
-        <div class="gallery-info">
-          <span class="gallery-tag">Instagram / Curation</span>
-          <h3 class="gallery-card-title">Cafe Curation: 감도 높은 공간들</h3>
-          <p class="gallery-card-desc">직접 경험한 감각적인 카페들을 큐레이션하여 소개합니다. 공간의 무드와 맛을 나만의 시선으로 기록하고 제안합니다.</p>
-          <a href="https://www.instagram.com/jh_cafe.comma/" target="_blank" rel="noopener" class="gallery-link">VIEW MORE →</a>
-        </div>
-      </div>
-
-      <div class="gallery-card" id="gcard-3">
-        <img src="https://picsum.photos/seed/work3/900/1200" alt="Work 3" class="gallery-img" />
-        <div class="gallery-overlay"></div>
-        <div class="gallery-info">
-          <span class="gallery-tag">Document</span>
-          <h3 class="gallery-card-title">Project Title</h3>
-          <p class="gallery-card-desc">작업물 설명을 추가할 예정입니다.</p>
-          <a href="#" class="gallery-link">VIEW MORE →</a>
-        </div>
-      </div>
-
-      <div class="gallery-card" id="gcard-4">
-        <img src="https://picsum.photos/seed/work4/900/1200" alt="Work 4" class="gallery-img" />
-        <div class="gallery-overlay"></div>
-        <div class="gallery-info">
-          <span class="gallery-tag">Project</span>
-          <h3 class="gallery-card-title">Project Title</h3>
-          <p class="gallery-card-desc">작업물 설명을 추가할 예정입니다.</p>
-          <a href="#" class="gallery-link">VIEW MORE →</a>
-        </div>
-      </div>
-
-      <div class="gallery-card" id="gcard-5">
-        <img src="https://picsum.photos/seed/work5/900/1200" alt="Work 5" class="gallery-img" />
-        <div class="gallery-overlay"></div>
-        <div class="gallery-info">
-          <span class="gallery-tag">Design</span>
-          <h3 class="gallery-card-title">Project Title</h3>
-          <p class="gallery-card-desc">작업물 설명을 추가할 예정입니다.</p>
-          <a href="#" class="gallery-link">VIEW MORE →</a>
-        </div>
-      </div>
-
-    </div>
-    <div class="gallery-progress-wrap">
-      <div class="gallery-progress-bar" id="galleryProgress"></div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO -->
-  <section id="portfolio" class="section section-alt">
-    <div class="container">
-
-      <h2 class="section-title">Portfolio</h2>
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="design">Design</button>
-        <button class="filter-btn" data-filter="doc">Document</button>
-        <button class="filter-btn" data-filter="project">Project</button>
-      </div>
-      <div class="portfolio-grid" id="portfolioGrid">
-        <div class="portfolio-placeholder">
-          <div class="pp-icon">🖼️</div>
-          <p>작업물을 추가할 예정입니다</p>
-          <span>Design · Documents · Projects</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- MEDIA HUB -->
   <section id="media" class="section">
     <div class="container media-container">
@@ -344,8 +357,7 @@
 
       <!-- Right: Article Grid -->
       <div class="media-grid">
-        
-        <!-- Card 1: 2024.01.29 (SuperBin) -->
+<!-- Card 1: 2024.01.29 (SuperBin) -->
         <a href="https://www.superbin.co.kr/news/194" target="_blank" rel="noopener" class="media-card" data-category="인터뷰">
           <div class="mc-img-wrap">
             <img src="./img/superbin_thumbnail.png" alt="SuperBin Interview Thumbnail" class="mc-img">
@@ -357,6 +369,21 @@
               <span class="mc-date">2024.01.29</span>
             </div>
             <h3 class="mc-title">[네프론 이용자 인터뷰 vol.9] 금호여자중학교·포은고등학교</h3>
+          </div>
+        </a>
+
+        <!-- Card: 2023.09.15 (News - YC Assembly) -->
+        <a href="https://www.yc24.kr/news/articleView.html?idxno=321949" target="_blank" rel="noopener" class="media-card" data-category="뉴스">
+          <div class="mc-img-wrap">
+            <img src="img/media_yc_v2.png" alt="News Image" class="mc-img">
+          </div>
+          <div class="mc-content">
+            <div class="mc-meta">
+              <span class="mc-category">뉴스</span>
+              <span class="mc-divider">|</span>
+              <span class="mc-date">2023.09.15</span>
+            </div>
+            <h3 class="mc-title">영천교육지원청, 영천연합학생회 2차 정례회 개최</h3>
           </div>
         </a>
 
@@ -375,9 +402,7 @@
               <span class="mc-date">2023.08.07</span>
             </div>
             <h3 class="mc-title">[청소년리포트] 사제동행, 학생자치의 꽃을 피우다 / 안동MBC</h3>
-          </div>
-        </a>
-
+          </div></a>
         <!-- Card 3: 2023.06.03 (Debate) -->
         <a href="https://www.youtube.com/watch?v=RjjeNQl5_AA" target="_blank" rel="noopener" class="media-card" data-category="영상">
           <div class="mc-img-wrap" style="position: relative;">
@@ -393,9 +418,7 @@
               <span class="mc-date">2023.06.03</span>
             </div>
             <h3 class="mc-title">[Live] 2023학년도 경북학생자치참여위원회 임원선거 후보자토론회</h3>
-          </div>
-        </a>
-
+          </div></a>
         <!-- Card 4: 2023년 (Leadership Camp) -->
         <a href="https://www.youtube.com/live/9Iu5yBpwZDs" target="_blank" rel="noopener" class="media-card" data-category="영상">
           <div class="mc-img-wrap" style="position: relative;">
@@ -411,9 +434,7 @@
               <span class="mc-date">2023년</span>
             </div>
             <h3 class="mc-title">[Live] 2023 사제동행 학생자치 리더십 캠프 '교육감과의 소통·공감의 대화'</h3>
-          </div>
-        </a>
-
+          </div></a>
         <!-- Card 5: 2023.02.06 (Kyongbuk Ilbo - Commendation) -->
         <a href="https://www.kyongbuk.co.kr/news/articleView.html?idxno=2123466" target="_blank" rel="noopener" class="media-card hidden-card" data-category="뉴스">
           <div class="mc-img-wrap">
@@ -426,9 +447,7 @@
               <span class="mc-date">2023.02.06</span>
             </div>
             <h3 class="mc-title">영천 금호여중·포은고, 학교협동조합 공모 교육부장관상 수상</h3>
-          </div>
-        </a>
-
+          </div></a>
         <!-- Card 6: 2023.02.04 (News Free Zone - Commendation) -->
         <a href="https://www.newsfreezone.co.kr/news/articleView.html?idxno=442558" target="_blank" rel="noopener" class="media-card hidden-card" data-category="뉴스">
           <div class="mc-img-wrap">
@@ -441,9 +460,7 @@
               <span class="mc-date">2023.02.04</span>
             </div>
             <h3 class="mc-title">금호여중포은고 학교협동조합 교육부 장관상 수상</h3>
-          </div>
-        </a>
-
+          </div></a>
         <!-- Card 7: 2022.11.01 (Kyongbuk Ilbo - Video Award) -->
         <a href="https://www.kyongbuk.co.kr/news/articleView.html?idxno=2115856" target="_blank" rel="noopener" class="media-card hidden-card" data-category="뉴스">
           <div class="mc-img-wrap">
@@ -456,9 +473,7 @@
               <span class="mc-date">2022.11.01</span>
             </div>
             <h3 class="mc-title">영천 포은고 김회성·조정혜 학생, 경북학생영상제 '금상' 수상</h3>
-          </div>
-        </a>
-
+          </div></a>
         <!-- Card 8: 2022.11.01 (YouTube Video - Video Award) -->
         <a href="https://www.youtube.com/watch?v=gydGL_eV13E" target="_blank" rel="noopener" class="media-card hidden-card" data-category="영상">
           <div class="mc-img-wrap" style="position: relative;">
@@ -474,11 +489,24 @@
               <span class="mc-date">2022.11.01</span>
             </div>
             <h3 class="mc-title">제12회 경북학생영상제 금상 수상작 "친구야! 학교가자!"</h3>
+          </div></a>
+        <!-- Card: 2022 School Cooperative Award -->
+        <a href="https://www.youtube.com/watch?v=4T68TKgTCno" target="_blank" rel="noopener" class="media-card" data-category="영상">
+          <div class="mc-img-wrap" style="position: relative;">
+            <img src="https://img.youtube.com/vi/4T68TKgTCno/hqdefault.jpg" alt="Video Thumbnail" class="mc-img">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <span style="color: white; font-size: 20px; margin-left: 4px;">▶</span>
+            </div>
           </div>
-        </a>
-
-        <!-- Card 9: 2022년 출간 (Book) -->
-        <a href="http://www.nicebook.net/html/book/bookcontents.php?isbn=9791137289543&book_codeNum=383185" target="_blank" rel="noopener" class="media-card hidden-card" data-category="도서">
+          <div class="mc-content">
+            <div class="mc-meta">
+              <span class="mc-category">영상</span>
+              <span class="mc-divider">|</span>
+              <span class="mc-date">2022년</span>
+            </div>
+            <h3 class="mc-title">2022년 제 4회 학교협동조합 공모전 교육부장관상 수상 작품</h3>
+          </div></a>
+        <a href="http://www.nicebook.net/html/book/bookcontents.php?isbn=9791137289543&book_codeNum=383185" target="_blank" rel="noopener" class="media-card" data-category="도서">
           <div class="mc-img-wrap" style="aspect-ratio: 1/1;">
             <img src="img/book_cover.png" alt="Book Cover" class="mc-img">
           </div>
@@ -492,6 +520,20 @@
           </div>
         </a>
 
+        <!-- Card 10: 2019.03.06 (Blog - 3.1 Contest) -->
+        <a href="https://m.blog.naver.com/goarm540815/221481408200" target="_blank" rel="noopener" class="media-card hidden-card" data-category="뉴스">
+          <div class="mc-img-wrap">
+            <img src="img/media_31_v3.png" alt="Exhibition Image" class="mc-img">
+          </div>
+          <div class="mc-content">
+            <div class="mc-meta">
+              <span class="mc-category">뉴스</span>
+              <span class="mc-divider">|</span>
+              <span class="mc-date">2019.03.06</span>
+            </div>
+            <h3 class="mc-title">금호읍, 3.1운동 100주년 기념 나라사랑 공모전 작품 전시회</h3>
+          </div>
+        </a>
       </div>
 
       <!-- Show More Button -->
@@ -503,19 +545,6 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="section section-alt">
-    <div class="container">
-
-      <h2 class="section-title">Ongoing Projects</h2>
-      <div class="projects-grid">
-        <div class="project-placeholder">
-          <div class="live-badge">🔥 Coming Soon</div>
-          <p>진행 중인 프로젝트들을 여기에 담을 예정입니다</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- CONTACT / CTA -->
   <section id="contact" class="section">
     <div class="container">
