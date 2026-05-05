@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JO JEONGHYE — Portfolio</title>
+  <meta name="description" content="Portfolio of JO JEONGHYE — Designer, Creator, Storyteller." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">JJ<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-pill active" id="navAbout">About</a></li>
+      <li><a href="#skills" class="nav-pill" id="navSkills">Skills</a></li>
+      <li><a href="#timeline" class="nav-pill" id="navTimeline">Timeline</a></li>
+      <li><a href="#portfolio" class="nav-pill" id="navWorks">Works</a></li>
+      <li><a href="#certifications" class="nav-pill" id="navCerts">Certs</a></li>
+      <li><a href="#projects" class="nav-pill" id="navProjects">Projects</a></li>
+      <li><a href="#contact" class="nav-pill" id="navContact">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <img src="me.jpg" alt="" class="hero-bg-photo" aria-hidden="true" />
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <!-- Keyword marquee -->
+      <div class="hero-marquee-wrap">
+        <div class="hero-marquee-track" id="marqueeTrack">
+          <div class="hero-marquee-inner">
+            <span class="mq-word">A Self-Starter</span><span class="mq-sep">✦</span>
+            <span class="mq-word">Results-Driven</span><span class="mq-sep">✦</span>
+            <span class="mq-word">A Lifelong Learner</span><span class="mq-sep">✦</span>
+            <span class="mq-word">Detail-Oriented</span><span class="mq-sep">✦</span>
+            <span class="mq-word">A Team Player</span><span class="mq-sep">✦</span>
+            <!-- duplicate for seamless loop -->
+            <span class="mq-word">A Self-Starter</span><span class="mq-sep">✦</span>
+            <span class="mq-word">Results-Driven</span><span class="mq-sep">✦</span>
+            <span class="mq-word">A Lifelong Learner</span><span class="mq-sep">✦</span>
+            <span class="mq-word">Detail-Oriented</span><span class="mq-sep">✦</span>
+            <span class="mq-word">A Team Player</span><span class="mq-sep">✦</span>
+          </div>
+        </div>
+      </div>
+      <!-- Name -->
+      <h1 class="hero-name" id="heroName">
+        <span class="name-line" id="nameLine1">JO</span>
+        <span class="name-line" id="nameLine2">JEONGHYE</span>
+      </h1>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- GALLERY SCROLL -->
+  <section id="gallery">
+    <div class="gallery-header">
+      <div>
+        <p class="section-label">Featured Works</p>
+        <h2 class="gallery-title">Selected <span class="accent-word">Works</span></h2>
+      </div>
+      <div class="gallery-nav-btns">
+        <button class="gallery-arrow" id="galleryPrev" aria-label="Previous">←</button>
+        <button class="gallery-arrow" id="galleryNext" aria-label="Next">→</button>
+      </div>
+    </div>
+    <div class="gallery-track" id="galleryTrack">
+
+      <div class="gallery-card" id="gcard-1">
+        <img src="img/clony_thumbnail_v2.png" alt="CLONY K-Beauty Guide" class="gallery-img" />
+        <div class="gallery-overlay"></div>
+        <div class="gallery-info">
+          <span class="gallery-tag">App / Design</span>
+          <h3 class="gallery-card-title">CLONY: Global K-Beauty Guide</h3>
+          <p class="gallery-card-desc">글로벌 관광객의 언어 장벽을 해결하기 위해 비즈니스 가설을 세우고, 이를 실질적인 서비스로 구현한 프로젝트입니다.</p>
+          <a href="https://www.miricanvas.com/v2/ko/design2/851e2b8d-b730-479d-8128-7d4df59ec0a6?location=design&type=copy_link&access=link&permission=viewer" target="_blank" rel="noopener" class="gallery-link">VIEW MORE →</a>
+        </div>
+      </div>
+
+      <div class="gallery-card" id="gcard-2">
+        <img src="https://picsum.photos/seed/work2/900/1200" alt="Work 2" class="gallery-img" />
+        <div class="gallery-overlay"></div>
+        <div class="gallery-info">
+          <span class="gallery-tag">Branding</span>
+          <h3 class="gallery-card-title">Project Title</h3>
+          <p class="gallery-card-desc">작업물 설명을 추가할 예정입니다.</p>
+          <a href="#" class="gallery-link">VIEW MORE →</a>
+        </div>
+      </div>
+
+      <div class="gallery-card" id="gcard-3">
+        <img src="https://picsum.photos/seed/work3/900/1200" alt="Work 3" class="gallery-img" />
+        <div class="gallery-overlay"></div>
+        <div class="gallery-info">
+          <span class="gallery-tag">Document</span>
+          <h3 class="gallery-card-title">Project Title</h3>
+          <p class="gallery-card-desc">작업물 설명을 추가할 예정입니다.</p>
+          <a href="#" class="gallery-link">VIEW MORE →</a>
+        </div>
+      </div>
+
+      <div class="gallery-card" id="gcard-4">
+        <img src="https://picsum.photos/seed/work4/900/1200" alt="Work 4" class="gallery-img" />
+        <div class="gallery-overlay"></div>
+        <div class="gallery-info">
+          <span class="gallery-tag">Project</span>
+          <h3 class="gallery-card-title">Project Title</h3>
+          <p class="gallery-card-desc">작업물 설명을 추가할 예정입니다.</p>
+          <a href="#" class="gallery-link">VIEW MORE →</a>
+        </div>
+      </div>
+
+      <div class="gallery-card" id="gcard-5">
+        <img src="https://picsum.photos/seed/work5/900/1200" alt="Work 5" class="gallery-img" />
+        <div class="gallery-overlay"></div>
+        <div class="gallery-info">
+          <span class="gallery-tag">Design</span>
+          <h3 class="gallery-card-title">Project Title</h3>
+          <p class="gallery-card-desc">작업물 설명을 추가할 예정입니다.</p>
+          <a href="#" class="gallery-link">VIEW MORE →</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="gallery-progress-wrap">
+      <div class="gallery-progress-bar" id="galleryProgress"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+
+    <div class="container">
+      <div class="section-label">01 — About</div>
+      <div class="about-inner">
+
+        <!-- Big statement -->
+        <p class="about-statement" id="typeStatement">
+          <span class="type-word">A</span> <span class="type-word">visionary</span> <span class="type-word">who</span> <span class="type-word">builds</span> <span class="type-word">from</span>
+          <span class="about-num type-word">0 to 1</span><span class="type-word">,</span><br>
+          <span class="type-word">and</span> <span class="type-word">a</span> <span class="type-word">strategist</span> <span class="type-word">who</span> <span class="type-word">scales</span> <span class="type-word">from</span>
+          <span class="about-num type-word">1 to 100</span><span class="type-word">.</span>
+        </p>
+
+
+        <!-- Sub text -->
+        <p class="about-sub-text">
+          고교 시절부터 이어진 주도적 실행 DNA는 실전 경험을 거치며 비즈니스 역량으로 진화했습니다.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container skills-container">
+      
+      <div class="skills-header">
+        <div class="skills-header-text">
+          <h2 class="skills-main-title">나만의 확실한 무기</h2>
+          <p class="skills-subtitle">기획부터 시각화, 데이터 관리까지 목표에 맞는 최적의 툴을 다룹니다.</p>
+        </div>
+        <div class="skills-nav">
+          <div class="skills-arrows">
+            <button class="icon-btn" id="skillsPrev">←</button>
+            <button class="icon-btn" id="skillsNext">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-track" id="skillsTrack">
+        <!-- Card 1 -->
+        <div class="skill-card">
+          <h3 class="skill-title">Canva / MiriCanvas</h3>
+          <p class="skill-desc">직관적인 디자인 도구를 활용해 높은 퀄리티의 시각 자료를 빠르게 제작합니다.</p>
+          <div class="skill-graphic skill-graphic-1">
+            <div class="wire-circle"></div><div class="wire-circle"></div><div class="wire-circle"></div>
+          </div>
+        </div>
+        <!-- Card 2 (Figma) -->
+        <div class="skill-card">
+          <h3 class="skill-title">Figma</h3>
+          <p class="skill-desc">컴포넌트 기반의 UI 디자인과 프로토타이핑을 통해 효율적으로 인터페이스를 구축합니다.</p>
+          <div class="skill-graphic skill-graphic-5">
+            <div class="wire-rect"></div><div class="wire-rect"></div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="skill-card">
+          <h3 class="skill-title">Notion</h3>
+          <p class="skill-desc">복잡한 정보와 프로젝트를 체계적으로 문서화하고 팀과 원활하게 공유합니다.</p>
+          <div class="skill-graphic skill-graphic-2">
+             <div class="wire-torus"></div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="skill-card">
+          <h3 class="skill-title">Excel / Spreadsheet</h3>
+          <p class="skill-desc">방대한 데이터를 논리적으로 구조화하고 분석하여 확실한 결과를 도출합니다.</p>
+          <div class="skill-graphic skill-graphic-3">
+             <div class="wire-sphere"></div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="skill-card">
+          <h3 class="skill-title">PPT / Keynote</h3>
+          <p class="skill-desc">핵심 메시지가 돋보이는 임팩트 있는 프레젠테이션 덱을 기획하고 디자인합니다.</p>
+          <div class="skill-graphic skill-graphic-4">
+            <div class="wire-cone"></div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <!-- TIMELINE -->
+  <section id="timeline" class="section">
+    <div class="container">
+      <div class="section-label">03 — Journey</div>
+      <h2 class="section-title">LEADERSHIP <span class="accent-word">FOOTPRINTS</span></h2>
+      
+      <div class="timeline-v3">
+        <!-- Central Track -->
+        <div class="tl-v3-track">
+          <div class="tl-v3-progress" id="timelineProgress"></div>
+        </div>
+
+        <div class="tl-v3-items">
+          <!-- Item 1: CEO -->
+          <div class="tl-v3-item node-right">
+            <div class="tl-v3-content">
+              <span class="tl-v3-year">2025 - 2026</span>
+              <h3>📱 창업 및 서비스 기획 (대표)</h3>
+              <p>비즈니스 모델 수립 및 서비스 전략 기획 총괄. 데이터 기반의 문제 해결과 사용자 경험 설계를 주도합니다.</p>
+            </div>
+            <div class="tl-v3-dot"></div>
+          </div>
+
+          <!-- Item 2: Startup PM -->
+          <div class="tl-v3-item node-left">
+            <div class="tl-v3-dot"></div>
+            <div class="tl-v3-content">
+              <span class="tl-v3-year">2024 - 2025</span>
+              <h3>스타트업 프로젝트 매니징 (PM)</h3>
+              <p>제품 개발 사이클 관리 및 팀 커뮤니케이션 조율. 아이디어를 실질적인 제품으로 구현하는 실행력을 발휘했습니다.</p>
+            </div>
+          </div>
+
+          <!-- Item 3: Starbucks -->
+          <div class="tl-v3-item node-right">
+            <div class="tl-v3-content">
+              <span class="tl-v3-year">2024.02 - 09</span>
+              <h3>매장 운영 및 서비스</h3>
+              <p>Starbucks 바리스타 | 최전선에서 고객의 니즈를 파악하고 브랜드 가치를 전달하는 현장 경험을 쌓았습니다.</p>
+            </div>
+            <div class="tl-v3-dot"></div>
+          </div>
+
+          <!-- Item 4: Policy Representative -->
+          <div class="tl-v3-item node-left">
+            <div class="tl-v3-dot"></div>
+            <div class="tl-v3-content">
+              <span class="tl-v3-year">2023 - 2024</span>
+              <h3>청년 정책 제안 및 위원회 대표</h3>
+              <p>경북 자치 참여 위원회 대표 | 지역 사회의 문제를 정의하고 정책적 대안을 제안하며 거버넌스 역량을 키웠습니다.</p>
+            </div>
+          </div>
+
+          <!-- Item 5: Student Body President -->
+          <div class="tl-v3-item node-right">
+            <div class="tl-v3-content">
+              <span class="tl-v3-year">2021 - 2024</span>
+              <h3>협동조합 이사 & 전교 학생회장</h3>
+              <p>조직의 리더로서 공익적 가치를 창출하고, 구성원들과 함께 목표를 달성하는 주도적인 리더십을 경험했습니다.</p>
+            </div>
+            <div class="tl-v3-dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section section-alt">
+    <div class="container">
+      <div class="section-label">04 — Works</div>
+      <h2 class="section-title">Portfolio</h2>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="doc">Document</button>
+        <button class="filter-btn" data-filter="project">Project</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-placeholder">
+          <div class="pp-icon">🖼️</div>
+          <p>작업물을 추가할 예정입니다</p>
+          <span>Design · Documents · Projects</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA HUB -->
+  <section id="media" class="section">
+    <div class="container media-container">
+      
+      <!-- Left: Header & Filters -->
+      <div class="media-sidebar">
+        <h2 class="media-title">미디어허브</h2>
+        <p class="media-subtitle">생각에 그치지 않고, 끝내 결과로 증명해온<br>실행의 기록들입니다.</p>
+        
+        <div class="media-filters">
+          <button class="m-filter active" data-filter="all">전체</button>
+          <button class="m-filter" data-filter="뉴스">뉴스</button>
+          <button class="m-filter" data-filter="영상">영상/SNS</button>
+          <button class="m-filter" data-filter="인터뷰">인터뷰</button>
+          <button class="m-filter" data-filter="도서">도서</button>
+        </div>
+      </div>
+
+      <!-- Right: Article Grid -->
+      <div class="media-grid">
+        
+        <!-- Card 1: 2024.01.29 (SuperBin) -->
+        <a href="https://www.superbin.co.kr/news/194" target="_blank" rel="noopener" class="media-card" data-category="인터뷰">
+          <div class="mc-img-wrap">
+            <img src="./img/superbin_thumbnail.png" alt="SuperBin Interview Thumbnail" class="mc-img">
+          </div>
+          <div class="mc-content">
+            <div class="mc-meta">
+              <span class="mc-category">인터뷰</span>
+              <span class="mc-divider">|</span>
+              <span class="mc-date">2024.01.29</span>
+            </div>
+            <h3 class="mc-title">[네프론 이용자 인터뷰 vol.9] 금호여자중학교·포은고등학교</h3>
+          </div>
+        </a>
+
+        <!-- Card 2: 2023.08.07 (Andong MBC) -->
+        <a href="https://www.youtube.com/watch?v=DZg2hljmCHs" target="_blank" rel="noopener" class="media-card" data-category="영상">
+          <div class="mc-img-wrap" style="position: relative;">
+            <img src="https://img.youtube.com/vi/DZg2hljmCHs/hqdefault.jpg" alt="Video Thumbnail" class="mc-img">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <span style="color: white; font-size: 20px; margin-left: 4px;">▶</span>
+            </div>
+          </div>
+          <div class="mc-content">
+            <div class="mc-meta">
+              <span class="mc-category">영상</span>
+              <span class="mc-divider">|</span>
+              <span class="mc-date">2023.08.07</span>
+            </div>
+            <h3 class="mc-title">[청소년리포트] 사제동행, 학생자치의 꽃을 피우다 / 안동MBC</h3>
+          </div>
+        </a>
+
+        <!-- Card 3: 2023.06.03 (Debate) -->
+        <a href="https://www.youtube.com/watch?v=RjjeNQl5_AA" target="_blank" rel="noopener" class="media-card" data-category="영상">
+          <div class="mc-img-wrap" style="position: relative;">
+            <img src="https://img.youtube.com/vi/RjjeNQl5_AA/hqdefault.jpg" alt="Video Thumbnail" class="mc-img">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <span style="color: white; font-size: 20px; margin-left: 4px;">▶</span>
+            </div>
+          </div>
+          <div class="mc-content">
+            <div class="mc-meta">
+              <span class="mc-category">영상</span>
+              <span class="mc-divider">|</span>
+              <span class="mc-date">2023.06.03</span>
+            </div>
+            <h3 class="mc-title">[Live] 2023학년도 경북학생자치참여위원회 임원선거 후보자토론회</h3>
+          </div>
+        </a>
+
+        <!-- Card 4: 2023년 (Leadership Camp) -->
+        <a href="https://www.youtube.com/live/9Iu5yBpwZDs" target="_blank" rel="noopener" class="media-card" data-category="영상">
+          <div class="mc-img-wrap" style="position: relative;">
+            <img src="https://img.youtube.com/vi/9Iu5yBpwZDs/hqdefault.jpg" alt="Video Thumbnail" class="mc-img">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <span style="color: white; font-size: 20px; margin-left: 4px;">▶</span>
+            </div>
+          </div>
+          <div class="mc-content">
+            <div class="mc-meta">
+              <span class="mc-category">영상</span>
+              <span class="mc-divider">|</span>
+              <span class="mc-date">2023년</span>
+            </div>
+            <h3 class="mc-title">[Live] 2023 사제동행 학생자치 리더십 캠프 '교육감과의 소통·공감의 대화'</h3>
+          </div>
+        </a>
+
+        <!-- Card 5: 2023.02.06 (Kyongbuk Ilbo - Commendation) -->
+        <a href="https://www.kyongbuk.co.kr/news/articleView.html?idxno=2123466" target="_blank" rel="noopener" class="media-card hidden-card" data-category="뉴스">
+          <div class="mc-img-wrap">
+            <img src="img/news_20230206.png" alt="News Image" class="mc-img">
+          </div>
+          <div class="mc-content">
+            <div class="mc-meta">
+              <span class="mc-category">뉴스</span>
+              <span class="mc-divider">|</span>
+              <span class="mc-date">2023.02.06</span>
+            </div>
+            <h3 class="mc-title">영천 금호여중·포은고, 학교협동조합 공모 교육부장관상 수상</h3>
+          </div>
+        </a>
+
+        <!-- Card 6: 2023.02.04 (News Free Zone - Commendation) -->
+        <a href="https://www.newsfreezone.co.kr/news/articleView.html?idxno=442558" target="_blank" rel="noopener" class="media-card hidden-card" data-category="뉴스">
+          <div class="mc-img-wrap">
+            <img src="img/news_20230204.png" alt="News Image" class="mc-img">
+          </div>
+          <div class="mc-content">
+            <div class="mc-meta">
+              <span class="mc-category">뉴스</span>
+              <span class="mc-divider">|</span>
+              <span class="mc-date">2023.02.04</span>
+            </div>
+            <h3 class="mc-title">금호여중포은고 학교협동조합 교육부 장관상 수상</h3>
+          </div>
+        </a>
+
+        <!-- Card 7: 2022.11.01 (Kyongbuk Ilbo - Video Award) -->
+        <a href="https://www.kyongbuk.co.kr/news/articleView.html?idxno=2115856" target="_blank" rel="noopener" class="media-card hidden-card" data-category="뉴스">
+          <div class="mc-img-wrap">
+            <img src="img/news_202211.png" alt="News Image" class="mc-img">
+          </div>
+          <div class="mc-content">
+            <div class="mc-meta">
+              <span class="mc-category">뉴스</span>
+              <span class="mc-divider">|</span>
+              <span class="mc-date">2022.11.01</span>
+            </div>
+            <h3 class="mc-title">영천 포은고 김회성·조정혜 학생, 경북학생영상제 '금상' 수상</h3>
+          </div>
+        </a>
+
+        <!-- Card 8: 2022.11.01 (YouTube Video - Video Award) -->
+        <a href="https://www.youtube.com/watch?v=gydGL_eV13E" target="_blank" rel="noopener" class="media-card hidden-card" data-category="영상">
+          <div class="mc-img-wrap" style="position: relative;">
+            <img src="https://img.youtube.com/vi/gydGL_eV13E/hqdefault.jpg" alt="Video Thumbnail" class="mc-img">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <span style="color: white; font-size: 20px; margin-left: 4px;">▶</span>
+            </div>
+          </div>
+          <div class="mc-content">
+            <div class="mc-meta">
+              <span class="mc-category">영상</span>
+              <span class="mc-divider">|</span>
+              <span class="mc-date">2022.11.01</span>
+            </div>
+            <h3 class="mc-title">제12회 경북학생영상제 금상 수상작 "친구야! 학교가자!"</h3>
+          </div>
+        </a>
+
+        <!-- Card 9: 2022년 출간 (Book) -->
+        <a href="http://www.nicebook.net/html/book/bookcontents.php?isbn=9791137289543&book_codeNum=383185" target="_blank" rel="noopener" class="media-card hidden-card" data-category="도서">
+          <div class="mc-img-wrap" style="aspect-ratio: 1/1;">
+            <img src="img/book_cover.png" alt="Book Cover" class="mc-img">
+          </div>
+          <div class="mc-content">
+            <div class="mc-meta">
+              <span class="mc-category">도서</span>
+              <span class="mc-divider">|</span>
+              <span class="mc-date">2022년 출간</span>
+            </div>
+            <h3 class="mc-title">영천 포도잎 비누 이야기 (학생저자 단행본 출판)</h3>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Show More Button -->
+      <div class="media-more-wrap">
+        <button id="mediaMoreBtn" class="media-more-btn">더보기 ↓</button>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-label">06 — Projects</div>
+      <h2 class="section-title">Ongoing Projects</h2>
+      <div class="projects-grid">
+        <div class="project-placeholder">
+          <div class="live-badge">🔥 Coming Soon</div>
+          <p>진행 중인 프로젝트들을 여기에 담을 예정입니다</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section id="contact" class="section">
+    <div class="container">
+      <a href="https://www.instagram.com/Jeonghye_0120" target="_blank" rel="noopener" class="cta-card" id="ctaCard">
+
+        <!-- Upper: headline -->
+        <div class="cta-upper">
+          <h2 class="cta-headline">
+            Let's create<br>something people<br><em>remember.</em>
+          </h2>
+          <p class="cta-sub">아이디어가 있다면, 함께 만들어봐요.</p>
+        </div>
+
+        <!-- Divider -->
+        <div class="cta-divider"></div>
+
+        <!-- Lower: arrow + Let's talk -->
+        <div class="cta-lower">
+          <span class="cta-arrow">→</span>
+          <span class="cta-talk">Let's talk</span>
+        </div>
+
+      </a>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
