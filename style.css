@@ -56,21 +56,22 @@ a { color: inherit; text-decoration: none; }
    ============================= */
 #navbar {
   position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  height: var(--nav-h);
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 800px;
+  height: 60px;
+  background: rgba(20, 20, 22, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 clamp(1.5rem, 4vw, 4rem);
-  background: transparent;
-  transition: background var(--transition);
-}
-
-#navbar.scrolled {
-  background: rgba(13, 13, 13, 0.5);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  padding: 0 1.5rem;
+  z-index: 1000;
 }
 
 .nav-logo {
@@ -87,30 +88,26 @@ a { color: inherit; text-decoration: none; }
   color: var(--accent);
 }
 
-/* Pill group container */
 .nav-links {
   display: flex;
   list-style: none;
   gap: 0.3rem;
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 999px;
   padding: 0.3rem;
 }
 
-/* Individual pill */
 .nav-pill {
   display: block;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   color: rgba(255, 255, 255, 0.5);
-  padding: 0.42rem 1.05rem;
+  padding: 0.4rem 1.2rem;
   border-radius: 999px;
-  transition: all var(--transition);
-  white-space: nowrap;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
 }
 
 .nav-pill:hover {
@@ -121,7 +118,27 @@ a { color: inherit; text-decoration: none; }
 .nav-pill.active {
   background: #ffffff;
   color: #0d0d0d;
-  font-weight: 700;
+}
+
+.nav-socials {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.social-icon-link {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.social-icon-link:hover {
+  color: var(--accent);
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 .nav-toggle {
