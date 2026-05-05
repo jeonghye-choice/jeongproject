@@ -549,7 +549,6 @@
   <section id="contact" class="section">
     <div class="container">
       <a href="https://www.instagram.com/Jeonghye_0120" target="_blank" rel="noopener" class="cta-card" id="ctaCard">
-
         <!-- Upper: headline -->
         <div class="cta-upper">
           <h2 class="cta-headline">
@@ -558,19 +557,41 @@
           <p class="cta-sub">아이디어가 있다면, 함께 만들어봐요.</p>
           <img src="dog.png" class="cta-doodle" alt="Doodle" />
         </div>
-
         <!-- Divider -->
         <div class="cta-divider"></div>
-
         <!-- Lower: arrow + Let's talk -->
         <div class="cta-lower">
           <span class="cta-arrow">→</span>
           <span class="cta-talk">Let's talk</span>
         </div>
-
       </a>
+
+      <!-- SUPPORT BUTTON (BELOW CTA) -->
+      <div class="support-btn-wrap">
+        <button class="support-pill-btn" id="openSupport">💸 거지 정혜에게 후원하기</button>
+      </div>
     </div>
   </section>
+
+  <!-- MINI FOOTER -->
+  <footer class="footer-mini">
+    <div class="container footer-content">
+      <p class="footer-copy">© 2024 JO JEONGHYE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SUPPORT MODAL (REUSED) -->
+  <div class="s-modal" id="supportModal">
+    <div class="s-modal-overlay" id="modalOverlay"></div>
+    <div class="s-modal-content">
+      <button class="s-modal-close" id="closeSupport">✕</button>
+      <div class="s-modal-inner">
+        <h3 class="s-modal-title">정혜의 성장 엔진에<br>연료를 채워주세요! ☕️</h3>
+        <img src="img/support_qr.png" alt="Support QR Code" class="s-qr-img">
+        <p class="s-modal-sub">보내주신 응원은 더 큰 결과물로 보답하겠습니다.</p>
+      </div>
+    </div>
+  </div>
 
   <script src="main.js"></script>
 </body>

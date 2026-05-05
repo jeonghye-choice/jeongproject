@@ -1506,6 +1506,111 @@ a { color: inherit; text-decoration: none; }
   word-break: keep-all; /* Prevent awkward breaks in Korean */
 }
 
+/* SUPPORT PILL BUTTON */
+.support-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.support-pill-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.support-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* MINI FOOTER */
+.footer-mini {
+  padding: 60px 0 40px;
+  text-align: center;
+}
+.footer-copy {
+  color: #444;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+
+/* MODAL STYLES */
+.s-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.s-modal.active {
+  display: flex;
+}
+.s-modal-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+}
+.s-modal-content {
+  position: relative;
+  background: #111;
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  width: 90%;
+  max-width: 440px;
+  padding: 50px 30px;
+  text-align: center;
+  z-index: 10;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease;
+}
+.s-modal.active .s-modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+.s-modal-close {
+  position: absolute;
+  top: 24px; right: 24px;
+  background: none; border: none;
+  color: #fff; font-size: 1.5rem;
+  cursor: pointer; opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.s-modal-close:hover { opacity: 1; }
+.s-modal-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+.s-qr-img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+.s-modal-sub {
+  font-size: 0.95rem;
+  color: #888;
+}
+
 /* Reveal on Hover of the item */
 .tl-v3-item.active .tl-v3-content:hover p,
 .tl-v3-item.active .tl-v3-content.expanded p {

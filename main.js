@@ -29,6 +29,33 @@ const MOUSE_REPEL_DIST = 120;
 
 const mouse = { x: -9999, y: -9999 };
 
+// --- SUPPORT MODAL LOGIC ---
+document.addEventListener('DOMContentLoaded', () => {
+  const openSupport = document.getElementById('openSupport');
+  const closeSupport = document.getElementById('closeSupport');
+  const modalOverlay = document.getElementById('modalOverlay');
+  const supportModal = document.getElementById('supportModal');
+
+  if (openSupport && supportModal) {
+    openSupport.addEventListener('click', () => {
+      supportModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    const closeModal = () => {
+      supportModal.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    if (closeSupport) closeSupport.addEventListener('click', closeModal);
+    if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  }
+});
+
 window.addEventListener('mousemove', (e) => {
   mouse.x = e.clientX;
   mouse.y = e.clientY;
