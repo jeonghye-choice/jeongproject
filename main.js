@@ -576,3 +576,14 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// --- TIMELINE CLICK TO EXPAND (Mobile & Desktop) ---
+document.addEventListener('DOMContentLoaded', () => {
+  const tlContents = document.querySelectorAll('.tl-v3-content');
+  tlContents.forEach(content => {
+    content.addEventListener('click', () => {
+      content.classList.toggle('expanded');
+    });
+  });
+});
+
+
