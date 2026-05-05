@@ -1557,3 +1557,37 @@ a { color: inherit; text-decoration: none; }
   .tl-v3-content::before { display: none; }
   .tl-v3-item.active .tl-v3-dot { transform: scale(1.2); }
 }
+
+/* =============================
+   CONTACT DOODLE
+   ============================= */
+.cta-upper {
+  position: relative;
+}
+
+.cta-doodle {
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  height: 280px;
+  width: auto;
+  filter: invert(1) brightness(1.2);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  opacity: 0.8;
+  transform: rotate(5deg);
+  transition: var(--transition);
+}
+
+.cta-card:hover .cta-doodle {
+  transform: rotate(0deg) scale(1.05);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .cta-doodle {
+    height: 180px;
+    bottom: -20px;
+    right: -10px;
+  }
+}
