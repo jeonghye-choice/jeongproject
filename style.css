@@ -1616,126 +1616,159 @@ a { color: inherit; text-decoration: none; }
   .name-jeonghye { letter-spacing: 6px; }
 }
 
-/* =============================
-   TIMELINE V3 (Scroll Gauge)
-   ============================= */
-.timeline-v3 {
-  position: relative;
-  max-width: 1000px;
-  margin: 6rem auto 0;
-  padding: 4rem 0;
+/* ──────────────────────────────────────────────
+   LEADERSHIP CLEAN LIST
+   ────────────────────────────────────────────── */
+.leadership-list {
+  max-width: 850px;
+  margin: 4rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative; /* For progress track */
 }
 
-.tl-v3-track {
+/* Continuous Progress Track */
+.list-progress-track {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
+  left: 5px; /* Aligned with marker-dot center */
+  top: 1.5rem;
+  bottom: 4rem;
+  width: 1px;
   background: rgba(255, 255, 255, 0.05);
   z-index: 1;
 }
 
-.tl-v3-progress {
+.list-progress-bar {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
-  height: 0%; /* Dynamic */
-  background: linear-gradient(to bottom, var(--accent), #4facfe);
-  box-shadow: var(--glow-blue);
+  height: 0%; /* Updated via JS */
+  background: var(--accent);
+  box-shadow: 0 0 15px var(--accent), 0 0 30px var(--accent);
   transition: height 0.1s ease-out;
 }
 
-.tl-v3-items {
+.lead-item {
+  display: flex;
+  gap: 2.5rem;
   position: relative;
   z-index: 2;
+}
+
+/* Marker (Dot) */
+.lead-marker {
   display: flex;
   flex-direction: column;
-  gap: 12rem;
-}
-
-.tl-v3-item {
-  display: flex;
   align-items: center;
-  width: 100%;
-  position: relative;
-  opacity: 0.3;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  width: 12px;
 }
 
-.tl-v3-item.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.tl-v3-dot {
-  width: 16px;
-  height: 16px;
+.marker-dot {
+  width: 12px;
+  height: 12px;
   background: var(--bg-base);
   border: 2px solid var(--border);
   border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 3;
-  transition: var(--transition);
+  margin-top: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.tl-v3-item.active .tl-v3-dot {
+/* Marker Line removal (we use progress-track now) */
+.marker-line { display: none; }
+
+/* Card */
+.lead-card {
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 3.5rem;
+  transition: all 0.4s ease;
+  opacity: 0.5; /* Dim by default */
+  transform: translateX(-10px);
+}
+
+.lead-item.active .lead-card {
+  opacity: 1;
+  transform: translateX(0);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.lead-item.active .marker-dot {
   background: var(--accent);
   border-color: var(--accent);
-  box-shadow: var(--glow-blue);
-  transform: translateX(-50%) scale(1.4);
+  box-shadow: 0 0 12px var(--accent);
+  transform: scale(1.2);
 }
 
-.tl-v3-content {
-  width: 42%;
-  padding: 2.5rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  position: relative;
-}
-
-.tl-v3-item.active .tl-v3-content {
+.lead-item:hover .lead-card {
   border-color: var(--accent-border);
-  background: var(--bg-card-hover);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transform: translateX(5px);
 }
 
-.node-right { justify-content: flex-end; }
-.node-left { justify-content: flex-start; }
-
-.tl-v3-year {
-  display: inline-block;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--accent);
+/* Header & Typography */
+.lead-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 0.8rem;
+}
+
+.lead-year {
+  font-family: 'Outfit', sans-serif;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.lead-badge {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #000;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 900;
   letter-spacing: 1px;
 }
 
-.tl-v3-content h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-  cursor: pointer;
-  transition: var(--transition);
+.lead-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
 }
 
-.tl-v3-content p {
-  font-size: 0.9rem;
+.lead-desc {
+  font-size: 1rem;
   color: var(--text-secondary);
-  line-height: 1.6;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  margin-top: 0;
-  word-break: keep-all; /* Prevent awkward breaks in Korean */
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+/* Current Highlight */
+.lead-item.current .marker-dot {
+  background: var(--accent);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.lead-item.current .lead-card {
+  border-color: rgba(65, 179, 255, 0.2);
+  background: rgba(65, 179, 255, 0.03);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .lead-item { gap: 1.2rem; }
+  .lead-card { padding: 1.5rem; }
+  .lead-title { font-size: 1.2rem; }
 }
 
 /* SUPPORT PILL BUTTON */

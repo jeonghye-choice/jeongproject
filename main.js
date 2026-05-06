@@ -575,39 +575,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateMediaGrid('all');
 });
 
-// --- TIMELINE SCROLL GAUGE LOGIC ---
-window.addEventListener('scroll', () => {
-  const timeline = document.getElementById('timeline');
-  const progressBar = document.getElementById('timelineProgress');
-  const items = document.querySelectorAll('.tl-v3-item');
-  
-  if (!timeline || !progressBar) return;
 
-  const rect = timeline.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
-  
-  // Calculate visibility and progress
-  // Trigger when the top of the section enters the bottom 20% of the screen
-  if (rect.top < windowHeight * 0.8 && rect.bottom > windowHeight * 0.2) {
-    const sectionHeight = rect.height;
-    // Calculate how far we've scrolled into the section (0 to 1)
-    let progress = (windowHeight * 0.8 - rect.top) / sectionHeight;
-    progress = Math.max(0, Math.min(1, progress));
-    
-    progressBar.style.height = `${progress * 100}%`;
-
-    // Activate items as the gauge passes them
-    items.forEach(item => {
-      const itemRect = item.getBoundingClientRect();
-      // Activate if the item's dot area is reached by the gauge (approx 50-60% of screen height)
-      if (itemRect.top < windowHeight * 0.6) {
-        item.classList.add('active');
-      } else {
-        item.classList.remove('active');
-      }
-    });
-  }
-});
 
 // --- TIMELINE CLICK TO EXPAND (Mobile & Desktop) ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -690,3 +658,37 @@ function initTextReveal() {
 // Initialize text reveal before observer starts
 initTextReveal();
 
+
+// ──────────────────────────────────────────────
+// LEADERSHIP LIST SCROLL GAUGE
+// ──────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const leadList = document.querySelector('.leadership-list');
+  const leadBar = document.getElementById('leadProgress');
+  const leadItems = document.querySelectorAll('.lead-item');
+  
+  if (!leadList || !leadBar) return;
+
+  const rect = leadList.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+  
+  // 게이지 계산 (화면 중앙 기준)
+  const triggerPoint = windowHeight * 0.7; // 화면 하단에서 30% 지점
+  const sectionStart = rect.top;
+  const sectionHeight = rect.height;
+  
+  let progress = (triggerPoint - sectionStart) / sectionHeight;
+  progress = Math.max(0, Math.min(1, progress));
+  
+  leadBar.style.height = `${progress * 100}%`;
+
+  // 개별 아이템 활성화
+  leadItems.forEach(item => {
+    const itemRect = item.getBoundingClientRect();
+    if (itemRect.top < triggerPoint) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+});
