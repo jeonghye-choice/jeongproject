@@ -474,7 +474,8 @@ a { color: inherit; text-decoration: none; }
 /* The scrollable track */
 .gallery-track {
   display: flex;
-  gap: 3px;
+  gap: 20px;
+  padding: 2rem 0;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -490,11 +491,13 @@ a { color: inherit; text-decoration: none; }
 .gallery-card {
   position: relative;
   flex-shrink: 0;
-  width: clamp(300px, 44vw, 600px);
-  height: clamp(460px, 82vh, 780px);
-  scroll-snap-align: start;
+  width: clamp(320px, 35vw, 520px);
+  height: clamp(500px, 70vh, 720px);
+  scroll-snap-align: center;
   overflow: hidden;
   background: #111;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
 }
 
 .gallery-card:first-child {
@@ -647,7 +650,15 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -0.5px;
   word-break: keep-all;
   overflow-wrap: break-word;
-  white-space: normal;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.35em;
+}
+
+.break-line {
+  flex-basis: 100%;
+  width: 100%;
+  height: 0;
 }
 
 .about-num {
@@ -1320,14 +1331,106 @@ a { color: inherit; text-decoration: none; }
 /* =============================
    FOOTER
    ============================= */
-#footer {
-  padding: 2rem;
-  text-align: center;
+/* =============================
+   FOOTER PREMIUM
+   ============================= */
+.footer-premium {
+  background: var(--bg-base);
+  padding: 5rem 0 3rem;
   border-top: 1px solid var(--border);
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  letter-spacing: 1.5px;
 }
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  max-width: 300px;
+}
+
+.footer-logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+.footer-logo span { color: var(--accent); }
+
+.footer-tagline {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.footer-nav-groups {
+  display: flex;
+  gap: 5rem;
+}
+
+.footer-group-title {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-links a {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.footer-social-minimal {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-social-minimal a {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.footer-social-minimal a:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .footer-nav-groups { gap: 3rem; }
+  .footer-bottom { flex-direction: column; gap: 1.5rem; text-align: center; }
+}
+
 
 /* =============================
    ANIMATIONS
