@@ -264,8 +264,8 @@ a { color: inherit; text-decoration: none; }
   object-fit: cover;
   object-position: center 15%;
   z-index: 0;
-  opacity: 0.75;
-  filter: blur(1.5px) brightness(0.68);
+  opacity: 0.85;
+  filter: blur(1.5px) brightness(0.75);
   pointer-events: none;
 }
 
@@ -273,9 +273,16 @@ a { color: inherit; text-decoration: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 40%, rgba(13,13,13,0.65) 100%);
+  /* Spotlight effect with reduced opacity for more transparency */
+  background: radial-gradient(
+    circle 400px at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+    rgba(13, 13, 13, 0) 0%, 
+    rgba(13, 13, 13, 0.4) 70%,
+    rgba(13, 13, 13, 0.7) 100%
+  );
   z-index: 2;
   pointer-events: none;
+  transition: background 0.15s ease-out;
 }
 
 .hero-content {
@@ -303,9 +310,17 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Marquee ── */
 .hero-marquee-wrap {
-  width: 100%;
+  width: fit-content;
+  max-width: 90%;
+  margin: 3.5rem auto 0; /* Space above from the name */
+  padding: 0.6rem 2.5rem;
+  background: rgba(255, 255, 255, 0.01); /* Almost transparent */
+  backdrop-filter: blur(4px); /* Very subtle blur */
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.04); /* Faint border */
+  border-radius: 99px;
   overflow: hidden;
-  padding: 0 clamp(1.5rem, 5vw, 5rem);
+  /* Removed heavy box-shadow */
   opacity: 0;
   animation: fadeIn 1s ease forwards 0.3s;
 }
@@ -365,8 +380,17 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
   color: var(--text-primary);
   white-space: nowrap;
-  will-change: transform;
+  will-change: transform, color, -webkit-text-stroke;
   line-height: 0.9;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.name-line:hover {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+  transform: translateX(15px);
+  letter-spacing: 0.02em;
 }
 
 @keyframes marqueeScroll {
