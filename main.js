@@ -202,7 +202,7 @@ animate();
 // 3. SCROLL REVEAL
 // ──────────────────────────────────────────────
 const revealEls = document.querySelectorAll(
-  '.section-label, .section-title, .about-grid, .skill-card, ' +
+  '.section-label, .section-title, .gallery-title, .skills-main-title, .media-title, .about-grid, .skill-card, ' +
   '.timeline-item, .portfolio-placeholder, .cert-placeholder, ' +
   '.project-placeholder, .contact-container, .filter-bar'
 );
@@ -213,7 +213,13 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
+    } else {
+      // Remove visible class when it leaves the viewport to re-trigger animation later
+      // Optional: Only remove if it's below the viewport to prevent flickering at the top
+      const rect = entry.target.getBoundingClientRect();
+      if (rect.top > window.innerHeight || rect.bottom < 0) {
+        entry.target.classList.remove('visible');
+      }
     }
   });
 }, { threshold: 0.12 });
@@ -613,4 +619,74 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// ──────────────────────────────────────────────
+// 12. 3D TILT EFFECT (Gallery Cards)
+// ──────────────────────────────────────────────
+const cards = document.querySelectorAll('.gallery-card');
+cards.forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const rotateX = ((y - centerY) / centerY) * -10; // max 10deg
+    const rotateY = ((x - centerX) / centerX) * 10;  // max 10deg
+    
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+  });
+  
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+  });
+});
+
+// ──────────────────────────────────────────────
+// 13. STAGGERED TEXT REVEAL (Title Splitting)
+// ──────────────────────────────────────────────
+function initTextReveal() {
+  const titles = document.querySelectorAll('.section-title, .gallery-title, .skills-main-title, .media-title');
+  
+  titles.forEach(title => {
+    const nodes = Array.from(title.childNodes);
+    title.innerHTML = '';
+    title.classList.add('reveal');
+    
+    let charIndex = 0;
+
+    nodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        // Handle plain text
+        const text = node.textContent;
+        [...text].forEach(char => {
+          title.appendChild(createCharSpan(char, charIndex++));
+        });
+      } else if (node.nodeType === Node.ELEMENT_NODE) {
+        // Handle element (like <span class="accent-word">)
+        const newElement = node.cloneNode(false);
+        const text = node.textContent;
+        [...text].forEach(char => {
+          newElement.appendChild(createCharSpan(char, charIndex++));
+        });
+        title.appendChild(newElement);
+      }
+    });
+  });
+
+  function createCharSpan(char, index) {
+    const wrap = document.createElement('span');
+    wrap.className = 'char-wrap';
+    const charSpan = document.createElement('span');
+    charSpan.className = 'char';
+    charSpan.textContent = char === ' ' ? '\u00A0' : char;
+    charSpan.style.setProperty('--char-index', index);
+    wrap.appendChild(charSpan);
+    return wrap;
+  }
+}
+
+// Initialize text reveal before observer starts
+initTextReveal();
 
